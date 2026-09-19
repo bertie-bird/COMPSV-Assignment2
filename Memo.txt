@@ -1,0 +1,13 @@
+How does your list work?
+This list was created to be a waitlist for managers to keep track of customers.
+The way that this list works is that each customer is created into a node which keeps this information organized. 
+With this list structure it allows the engineer to have the customer's name available to edit. Each node also points to the next customer.
+
+What role does the head play?
+In linked lists, the best way to explain it outside of coding terms is that it’s like the first house number on a street. 
+The head's role in the list is to be the indicator that a node has started. This helps the engineer see when a list begins. 
+It also keeps track of the first name in the list as well as making it easier to navigate the list when there is a need to change the information within the list.
+
+When might a real engineer need a custom list like this?
+A time where a real engineer would need this custom is when nodes need to constantly be updated with new information without changing the original structure. 
+This waitlist assignment is a good example of how custom linked lists can have information easily added or removed.

@@ -7,8 +7,13 @@ class Node:
         next (Node): A reference to the next node in the list.
     '''
     
-    
+def __init__(self, name):
+        self.name = name
+        self.next = None
 
+node1 = Node("Alice")
+node2 = Node("Harry")
+node3 = Node("Jeff")
 
 
 # Create a LinkedList class to manage the waitlist
@@ -24,11 +29,34 @@ class LinkedList:
         print_list(): Prints the current waitlist.
     '''
     
+    
+    def __init__(self):
+        self.head = None
+
+    def add(self, value):
+        new_node = Node(value)
+        if not self.head:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+    
 
 
 def waitlist_generator():
     # Create a new linked list instance
-    
+    my_waitlist = LinkedList()
+    my_waitlist.add("Alice")
+    my_waitlist.add("Harry")
+    my_waitlist.add("Jeff")
+
+    def print_list(self):
+                current = self.head
+                while current:
+                    print(current.name)
+                    current = current.next
     
     while True:
         print("\n--- Waitlist Manager ---")
@@ -44,23 +72,25 @@ def waitlist_generator():
             name = input("Enter customer name to add to front: ")
             # Call the add_front method
             
+            my_waitlist.add_front(name)
 
         elif choice == "2":
             name = input("Enter customer name to add to end: ")
             # Call the add_end method
             
+            my_waitlist.add_end(name)
 
         elif choice == "3":
             name = input("Enter customer name to remove: ")
             # Call the remove method
             
+            my_waitlist.remove(name)
             
         elif choice == "4":
             print("Current waitlist:")
             # Print out the entire linked list using the print_list method.
             
-            
-            
+            my_waitlist.print_list()
 
         elif choice == "5":
             print("Exiting waitlist manager.")
@@ -70,10 +100,6 @@ def waitlist_generator():
 
 # Call the waitlist_generator function to start the program
 
+waitlist_generator()
 
-'''
-Design Memo: Write Your Design Memo Include a 200–300 word response in your code or in a .txt file:
-- How does your list work?
-- What role does the head play?
-- When might a real engineer need a custom list like this?
-'''
+
